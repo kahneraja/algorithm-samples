@@ -1,0 +1,20 @@
+{
+  "is_word":false,
+  "children":{
+    "A":{
+      "is_word":true, "children":{}
+    },
+    "B":{
+      "is_word":false, "children":{
+        "A":{
+          "is_word":false, "children":{
+            "R":{
+              "is_word":true, "children":{
+                "K":{
+                  "is_word":true, "children":{}
+                }
+            }}
+        }}
+     }}
+  }
+}

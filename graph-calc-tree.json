@@ -1,0 +1,35 @@
+{
+  "operation": "+",
+  "nodes": [
+    {
+      "operation":"-",
+      "nodes": [
+        {
+          "value":"15"
+        },
+        {
+          "value":"5"
+        }
+      ]
+    },
+    {
+      "operation":"-1",
+      "nodes": [
+        {
+          "operation":"+",
+          "nodes": [
+            {
+              "value":"2"
+            },
+            {
+              "value":"4"
+            },
+            {
+              "value":"3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
