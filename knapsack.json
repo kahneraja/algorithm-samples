@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "A",
+    "Weight": 3,
+    "Value": 5
+  },
+  {
+    "Name": "B",
+    "Weight": 2,
+    "Value": 3
+  },
+  {
+    "Name": "C",
+    "Weight": 1,
+    "Value": 4
+  }
+]
