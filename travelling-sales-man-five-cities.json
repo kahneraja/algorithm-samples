@@ -1,0 +1,30 @@
+{
+  "cities":5,
+  "roads":[
+    {
+      "start": 0,
+      "end":1,
+      "distance": 4
+    },
+    {
+      "start": 0,
+      "end":2,
+      "distance": 2
+    },
+    {
+      "start": 2,
+      "end":3,
+      "distance": 1
+    },
+    {
+      "start": 3,
+      "end":4,
+      "distance": 1
+    },
+    {
+      "start": 1,
+      "end":4,
+      "distance": 10
+    }
+  ]
+}
