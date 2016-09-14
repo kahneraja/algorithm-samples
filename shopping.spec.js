@@ -1,3 +1,4 @@
+"use strict";
 const assert = require("assert");
 const Shopping = require("./shopping.js");
 
@@ -79,7 +80,7 @@ describe("Shortest path to all fish and home.", function() {
     assert.equal(20, distance);
   });
 
-  it("Should graph.", function() {
+  it("Max distance should be 30.", function() {
     const shopping = new Shopping();
     const input = `5 5 5
 1 1
@@ -101,6 +102,38 @@ describe("Shortest path to all fish and home.", function() {
     };
     node.nodes = shopping.graph(district, district.centres[0], 0, []);
     shopping.print(node,0);
+  });
+
+  it("Max distance should be 3299.", function() {
+    const shopping = new Shopping();
+    const input = `8 9 5
+3 2 4 5
+0
+2 1 2
+0
+0
+2 3 4
+1 5
+1 1
+7 4 150
+3 6 166
+7 1 602
+1 3 932
+4 3 959
+1 5 269
+4 1 644
+2 1 745
+8 5 834`;
+    const district = shopping.parseShoppingData(input);
+    const start = district.centres[0];
+    const node = {
+      id: start.id,
+      distance: 0,
+      nodes: []
+    };
+    node.nodes = shopping.graph(district, district.centres[0], 0, []);
+    // shopping.print(node,0);
+    // assert.equal(3299, maxDistance);
   });
 
 });

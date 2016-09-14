@@ -20,7 +20,7 @@ module.exports = function (){
         id: i + 1,
         products: products,
         roads: [],
-        distanceTo: this.distanceTo,
+        distance: 0,
         isVisited: false
       };
       district.centres.push(centre);
@@ -58,6 +58,9 @@ module.exports = function (){
   this.graph = function(district, centre, distance, history){
     let nodes = [];
 
+    if (centre.id === 5)
+      return nodes;
+
     for(let i = 0; i < centre.roads.length; i++){
       let road = centre.roads[i];
       let nextCentre = district.centres[road.end];
@@ -81,10 +84,12 @@ module.exports = function (){
     return nodes;
   };
 
+
   this.print = function(node, indentation){
     console.log(Array(indentation * 2).join(" ") + node.id + ": " + node.distance);
     for(let i = 0; i < node.nodes.length; i++){
       this.print(node.nodes[i], indentation + 1);
     }
   };
+
 };
